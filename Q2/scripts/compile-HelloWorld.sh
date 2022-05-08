@@ -13,9 +13,9 @@ fi
 
 echo "Compiling HelloWorld.circom..."
 
-# compile circuit
+# compile circuit and output the constraint system (r1csfile), the wasm code to generate the witness (wasm file) and a debug file syms
 
-circom HelloWorld.circom --r1cs --wasm --sym -o HelloWorld
+circom HelloWorld.circom --r1cs --wasm --sym --json -o HelloWorld
 snarkjs r1cs info HelloWorld/HelloWorld.r1cs
 
 # Start a new zkey and make a contribution

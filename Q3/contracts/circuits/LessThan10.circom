@@ -10,6 +10,7 @@ template LessThan10() {
 
     lt.in[0] <== in;
     lt.in[1] <== 10;
-
     out <== lt.out;
 }
+
+component main=LessThan10();
